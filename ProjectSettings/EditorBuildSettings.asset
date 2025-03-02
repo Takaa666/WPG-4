@@ -4,5 +4,33 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes 1/MainMenu.unity
+    guid: 7803deaf513256947b5618c6aa7a232e
+  - enabled: 1
+    path: Assets/Scenes 1/SampleScene.unity
+    guid: 7a5b05af0aa578049a3c8a354a0fc749
+  - enabled: 1
+    path: Assets/Scenes 1/SampleScene 1.unity
+    guid: 721686b55f056284db787b6199ada3f0
+  - enabled: 1
+    path: Assets/Scenes 1/Main Coba.unity
+    guid: efc6ee1448174b343bb392e3f3c6b784
+  - enabled: 1
+    path: Assets/Assets/Scenes 1/MainWorldJeje.unity
+    guid: 7c6ae9e0f1170fe4dbcaa6443dd15288
+  - enabled: 1
+    path: Assets/Assets/Scenes 1/MainWorld Temon.unity
+    guid: 0c08609d4b4197d47be923176d2aa401
+  - enabled: 1
+    path: Assets/Assets/Scenes 1/MainMenu.unity
+    guid: 506d830965e879f44beec7000d2aec10
+  - enabled: 1
+    path: Assets/Scenes 1/Mandala Awal Jeje.unity
+    guid: 6ef82fa90dc9c7a4eac371997abaf8c5
+  - enabled: 1
+    path: Assets/Scenes 1/BismillahFinal.unity
+    guid: 9d79fa1a3d47ff4428af432b2e457ba2
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 4617cbc6fa89ed54b983261ee462e817, type: 2}
