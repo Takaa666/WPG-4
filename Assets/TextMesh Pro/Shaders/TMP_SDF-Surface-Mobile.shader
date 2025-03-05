@@ -76,11 +76,7 @@ SubShader {
 		float2	uv2_FaceTex;
 		float2  uv2_OutlineTex;
 		float2	param;					// Weight, Scale
-<<<<<<< HEAD
-		float3	viewDirEnv;		
-=======
 		float3	viewDirEnv;
->>>>>>> 13efb2979cf0ad7581e70d2b70bf94a6293d581d
 	};
 
 	#include "TMPro_Surface.cginc"

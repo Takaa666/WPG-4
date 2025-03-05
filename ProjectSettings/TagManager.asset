@@ -11,6 +11,7 @@ TagManager:
   - Drop
   - Benda Interactable
   - Mandala
+  - Throwable
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Pick
   - PP
-  - 
+  - Throwable
   - 
   - 
   - 

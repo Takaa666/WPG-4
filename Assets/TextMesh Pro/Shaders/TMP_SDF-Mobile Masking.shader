@@ -47,6 +47,7 @@ Properties {
 	_MaskEdgeColor		("Edge Color", Color) = (1,1,1,1)
 	_MaskEdgeSoftness	("Edge Softness", Range(0, 1)) = 0.01
 	_MaskWipeControl	("Wipe Position", Range(0, 1)) = 0.5
+
 	_StencilComp		("Stencil Comparison", Float) = 8
 	_Stencil			("Stencil ID", Float) = 0
 	_StencilOp			("Stencil Operation", Float) = 0

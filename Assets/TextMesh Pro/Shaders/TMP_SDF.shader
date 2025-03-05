@@ -146,6 +146,7 @@ SubShader {
 			float4	param			: TEXCOORD1;		// alphaClip, scale, bias, weight
 			float4	mask			: TEXCOORD2;		// Position in object space(xy), pixel Size(zw)
 			float3	viewDir			: TEXCOORD3;
+
 		#if (UNDERLAY_ON || UNDERLAY_INNER)
 			float4	texcoord2		: TEXCOORD4;		// u,v, scale, bias
 			fixed4	underlayColor	: COLOR1;
@@ -254,6 +255,7 @@ SubShader {
 			half4 outlineColor = _OutlineColor;
 
 			faceColor.rgb *= input.color.rgb;
+
 			faceColor *= tex2D(_FaceTex, input.textures.xy + float2(_FaceUVSpeedX, _FaceUVSpeedY) * _Time.y);
 			outlineColor *= tex2D(_OutlineTex, input.textures.zw + float2(_OutlineUVSpeedX, _OutlineUVSpeedY) * _Time.y);
 

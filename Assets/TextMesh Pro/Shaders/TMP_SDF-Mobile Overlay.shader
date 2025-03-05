@@ -6,14 +6,6 @@
 Shader "TextMeshPro/Mobile/Distance Field Overlay" {
 
 Properties {
-	_FaceColor			("Face Color", Color) = (1,1,1,1)
-	_FaceDilate			("Face Dilate", Range(-1,1)) = 0
-
-	_OutlineColor		("Outline Color", Color) = (0,0,0,1)
-	_OutlineWidth		("Outline Thickness", Range(0,1)) = 0
-	_OutlineSoftness	("Outline Softness", Range(0,1)) = 0
-
-	_UnderlayColor		("Border Color", Color) = (0,0,0,.5)
 	[HDR]_FaceColor		("Face Color", Color) = (1,1,1,1)
 	_FaceDilate			("Face Dilate", Range(-1,1)) = 0
 
@@ -50,14 +42,12 @@ Properties {
 	_ClipRect			("Clip Rect", vector) = (-32767, -32767, 32767, 32767)
 	_MaskSoftnessX		("Mask SoftnessX", float) = 0
 	_MaskSoftnessY		("Mask SoftnessY", float) = 0
-	
 
 	_StencilComp		("Stencil Comparison", Float) = 8
 	_Stencil			("Stencil ID", Float) = 0
 	_StencilOp			("Stencil Operation", Float) = 0
 	_StencilWriteMask	("Stencil Write Mask", Float) = 255
 	_StencilReadMask	("Stencil Read Mask", Float) = 255
-	
 
 	_CullMode			("Cull Mode", Float) = 0
 	_ColorMask			("Color Mask", Float) = 15
@@ -186,19 +176,6 @@ SubShader {
 			float4 clampedRect = clamp(_ClipRect, -2e10, 2e10);
 			float2 maskUV = (vert.xy - clampedRect.xy) / (clampedRect.zw - clampedRect.xy);
 
-			// Structure for pixel shader
-			pixel_t output = {
-				vPosition,
-				faceColor,
-				outlineColor,
-				float4(input.texcoord0.x, input.texcoord0.y, maskUV.x, maskUV.y),
-				half4(scale, bias - outline, bias + outline, bias),
-				half4(vert.xy * 2 - clampedRect.xy - clampedRect.zw, 0.25 / (0.25 * half2(_MaskSoftnessX, _MaskSoftnessY) + pixelSize.xy)),
-			#if (UNDERLAY_ON | UNDERLAY_INNER)
-				float4(input.texcoord0 + layerOffset, input.color.a, 0),
-				half2(layerScale, layerBias),
-			#endif
-			};
 			// Populate structure for pixel shader
 			output.vertex = vPosition;
 			output.faceColor = faceColor;

@@ -82,7 +82,4 @@ uniform float 		_GradientScale;
 uniform float		_ScaleX;
 uniform float		_ScaleY;
 uniform float		_PerspectiveFilter;
-<<<<<<< HEAD
-=======
 uniform float		_Sharpness;
->>>>>>> 13efb2979cf0ad7581e70d2b70bf94a6293d581d

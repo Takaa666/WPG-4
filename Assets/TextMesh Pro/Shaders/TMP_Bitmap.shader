@@ -25,6 +25,7 @@ Properties {
 SubShader{
 
 	Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
+
 	Stencil
 	{
 		Ref[_Stencil]
@@ -113,6 +114,7 @@ SubShader{
 			// Clamp _ClipRect to 16bit.
 			float4 clampedRect = clamp(_ClipRect, -2e10, 2e10);
 			OUT.mask = float4(vert.xy * 2 - clampedRect.xy - clampedRect.zw, 0.25 / (0.25 * half2(_MaskSoftnessX, _MaskSoftnessY) + pixelSize.xy));
+
 			return OUT;
 		}
 
