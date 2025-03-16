@@ -83,17 +83,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bulb Material
-    second: {fileID: 2100000, guid: 9c9a51468c918424c9830b0c8c88f972, type: 2}
+    second: {fileID: 2100000, guid: 5de8f70c7dae70647b6a502191e539e1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Lamp Base
-    second: {fileID: 2100000, guid: ebd356180d9fb6c4dbea1dad20dd4cff, type: 2}
+    second: {fileID: 2100000, guid: 4571e83ad1284cb4caa3fa526141cf3e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Plastic Material
-    second: {fileID: 2100000, guid: d06b0d7ed5639b741af3e763afd50262, type: 2}
+    second: {fileID: 2100000, guid: 91519fd45201d48408ddc0d01d5cf786, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
