@@ -23,12 +23,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.004
-    second: {fileID: 2100000, guid: f460264d89898fb419a18cbc59b5fe22, type: 2}
+    second: {fileID: 2100000, guid: 903c2dcd205e4994692db6dfc13ae8c9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Painted Plaster
-    second: {fileID: 2100000, guid: 344569fc79bcb5545905e26e853b6ff6, type: 2}
+    second: {fileID: 626856932539127007, guid: c33ab86b269a75743a0c450838e53091, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
