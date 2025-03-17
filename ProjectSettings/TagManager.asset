@@ -3,17 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pushable
+  - Minigame
+  - Laser
+  - Enemy
+  - Drop
+  - Benda Interactable
+  - Mandala
+  - Throwable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Pick
+  - PP
+  - Throwable
   - 
   - 
   - 

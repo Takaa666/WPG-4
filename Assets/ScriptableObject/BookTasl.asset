@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c069041e960344be65cbdc4ffe188, type: 3}
+  m_Name: BookTasl
+  m_EditorClassIdentifier: 
+  onQuestStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  questName: Book Task
+  questDescription: Complete the book task
+  targetObjectID: 09
+  dialogueSpeed: 0
+  objectiveTask:
+  - 
+  requiredQuests: []
+  targetObject: {fileID: 7695745228692498590, guid: ee7ff8f015085ce4994594e48e22e9ae, type: 3}
+  haloEffect: {fileID: 8905152198306512978, guid: 0625c02d446f5fc4385da93bfe3cdbba, type: 3}

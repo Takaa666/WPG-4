@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c069041e960344be65cbdc4ffe188, type: 3}
+  m_Name: LastBook
+  m_EditorClassIdentifier: 
+  onQuestStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  questName: Last Book
+  questDescription: 
+  targetObjectID: Last
+  dialogueSpeed: 0
+  objectiveTask: []
+  requiredQuests: []
+  targetObject: {fileID: 9045712795313976813, guid: 9cf975628b7dae348b22c6f08843727e, type: 3}
+  haloEffect: {fileID: 7197683071360595621, guid: d91b3e0b32e034142adee6dd41db0510, type: 3}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c069041e960344be65cbdc4ffe188, type: 3}
+  m_Name: Book 2
+  m_EditorClassIdentifier: 
+  onQuestStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  questName: Buku 2
+  questDescription: cari buku ke 2
+  targetObjectID: 88
+  dialogueSpeed: 0
+  objectiveTask:
+  - 
+  requiredQuests:
+  - {fileID: 11400000, guid: 89e55d658762781439f08698bf1f508e, type: 2}
+  targetObject: {fileID: 4105453376005475688, guid: f8a101bc9aaeee24193637146971599e, type: 3}
+  haloEffect: {fileID: 3966782774470508765, guid: 8d2c504ca83199249a6b4ecd687ef3c6, type: 3}
