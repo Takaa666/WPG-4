@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 53e4aaab51b337040a7ee6bb23bb9990, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material.001
     second: {fileID: 2100000, guid: 903c2dcd205e4994692db6dfc13ae8c9, type: 2}
   - first:
@@ -19,6 +24,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material.002
     second: {fileID: 2100000, guid: e4c3e0b6c544795448655ede5a0955c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: bf6a9958da78b184aaa1a78efb610955, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -93,132 +103,157 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Jungkat-Jungkit_Material_AlbedoTransparency
-    second: {fileID: 2800000, guid: 1731131c49036d44882007c6bd849dae, type: 3}
+    second: {fileID: 2800000, guid: e3d9f1d5ec1751445ba538adf68b5f38, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Jungkat-Jungkit_Material_MetallicSmoothness
-    second: {fileID: 2800000, guid: 97fbb0bf05bdfe74e82d4d580aa8cc26, type: 3}
+    second: {fileID: 2800000, guid: 9f1411ced78f5c2408b8f4d8d35779df, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Jungkat-Jungkit_Material_Normal
-    second: {fileID: 2800000, guid: 3c9f98e3bb6fd294f9b1410855c4e1fa, type: 3}
+    second: {fileID: 2800000, guid: 061c906053fbd244c9945f9d6a0cd594, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PaintedPlaster018_2K_Color
-    second: {fileID: 2800000, guid: 1ebdff90f3c2e2645bda3a2f7c707ea3, type: 3}
+    second: {fileID: 2800000, guid: 07c0ae1be8491fa4895de5908b533347, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PaintedPlaster018_2K_Roughness
-    second: {fileID: 2800000, guid: 542ef799247499a4e87999e3cd8cac05, type: 3}
+    second: {fileID: 2800000, guid: f76778eea710da243ab0dbd2789028c1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ayunan_DefaultMaterial_AlbedoTransparency
-    second: {fileID: 2800000, guid: 9d43600d9df40a0438ced0d88cdd3ac8, type: 3}
+    second: {fileID: 2800000, guid: a2c9a12b7f4cb584e98d2f1633dfd3b4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ayunan_DefaultMaterial_MetallicSmoothness
-    second: {fileID: 2800000, guid: 63ad900a397c40344bd3745d0f7dd7ff, type: 3}
+    second: {fileID: 2800000, guid: 01951130736f9604ea2a4295c7da9c76, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ayunan_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: 920cf92e54fd05d43abd8cf7eb18957f, type: 3}
+    second: {fileID: 2800000, guid: 6730255a0eafc6b4e9587def4d348551, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_kursi perpus_DefaultMaterial_AlbedoTransparency
-    second: {fileID: 2800000, guid: 3a759f738bbe94f40a00ba5013fb5ceb, type: 3}
+    second: {fileID: 2800000, guid: ee9d3f77f5115da4c8a7ef8b5047f5ec, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_kursi perpus_DefaultMaterial_MetallicSmoothness
-    second: {fileID: 2800000, guid: 891f74e2762179947a2dabd09d6aaa0d, type: 3}
+    second: {fileID: 2800000, guid: da7e20969f20a2e449a363a4b6b5da21, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_kursi perpus_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: 6f71fd60c0a332f45be9c8d07b89208c, type: 3}
+    second: {fileID: 2800000, guid: f4aa8f9b59bb17943a478c9f7c64c53c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_meja perpus_DefaultMaterial_AlbedoTransparency
-    second: {fileID: 2800000, guid: f803036227d612a4cb3176bdf8a8922b, type: 3}
+    second: {fileID: 2800000, guid: 044328055dd32eb439648057546bd90a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_meja perpus_DefaultMaterial_MetallicSmoothness
-    second: {fileID: 2800000, guid: 5002bed230bd2b84ab4946535d047c2d, type: 3}
+    second: {fileID: 2800000, guid: 371f9bd626fbd434485336da86726d86, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_meja perpus_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: 440024c2fa054d54db8217d6d31622f9, type: 3}
+    second: {fileID: 2800000, guid: 51f0da57bd0bcee43bf591b3cc2310e9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_meja_DefaultMaterial_AlbedoTransparency
-    second: {fileID: 2800000, guid: 05b262b0f6b19ef4aa7313b160d3f879, type: 3}
+    second: {fileID: 2800000, guid: a296881e52a5ded44b0fe5551e7215e0, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_meja_DefaultMaterial_MetallicSmoothness
-    second: {fileID: 2800000, guid: 1dc7b5e7b6d1bf6458ff7d93af665a38, type: 3}
+    second: {fileID: 2800000, guid: da7d2f8c93353bd4997c6cefefa077c5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: low_meja_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: a2aafaa1adafaa74697aaad9cdec968f, type: 3}
+    second: {fileID: 2800000, guid: a034ccd0b34da2b4f9255d8383834c0b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja Pustakawan_Material_BaseMap
-    second: {fileID: 2800000, guid: 4c86f5409d44d4a4a88a33fc6e1e7266, type: 3}
+    second: {fileID: 2800000, guid: 73b490f023d853c4688bd963d2143e10, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja Pustakawan_Material_Normal
-    second: {fileID: 2800000, guid: c742d168b1fce614db987e712345f157, type: 3}
+    second: {fileID: 2800000, guid: d4848ce7d2a7584429168bc79c93e9e9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja kelas_DefaultMaterial_AlbedoTransparency
-    second: {fileID: 2800000, guid: 79acd2cb7b7badf48a90a4e42e4fdfe1, type: 3}
+    second: {fileID: 2800000, guid: 6f688e6f5878427439a3caf67da1a559, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja kelas_DefaultMaterial_MetallicSmoothness
-    second: {fileID: 2800000, guid: eef78dbdbe3b4ca4881c0d7f00f7dc14, type: 3}
+    second: {fileID: 2800000, guid: 9202449df513e8047b01bc346b591e37, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja kelas_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: e0d4ab5ae903bdf42ab820945d3ef9da, type: 3}
+    second: {fileID: 2800000, guid: 727f6a19c48b5714db7937be855a218b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja tengah_DefaultMaterial_BaseMap
-    second: {fileID: 2800000, guid: 26f1bf3a93ab42743bc6295f6b6c5ad3, type: 3}
+    second: {fileID: 2800000, guid: 8bb94ad97f0d7764da20306c1a0ce475, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: meja tengah_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: e953f75337e775742b50276c03be5afe, type: 3}
+    second: {fileID: 2800000, guid: 6820eeb084915d34f98c8c7d54620d7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: meja_perpus kaca_DefaultMaterial_BaseMap
+    second: {fileID: 2800000, guid: bb122832155e6104bad5b950565ffbf6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: meja_perpus kaca_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 494587b0b89b9f94b9a338cd2bee97d1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: papan tulis_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: bd3ebd3f17fa10b459134d22f8d2c12b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: papan tulis_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 9cabfaeccfe4a8f4f99544f56a9998ff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: papan tulis_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: a99b925bd3a2c2942b537b365d9b625c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: perosotan_DefaultMaterial_BaseMap
-    second: {fileID: 2800000, guid: b1ae2c24f755a67429545b1c25133020, type: 3}
+    second: {fileID: 2800000, guid: 4cf3353578af7b64d8f0bbd645beba0d, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: perosotan_DefaultMaterial_Normal
-    second: {fileID: 2800000, guid: b18031d6f701cab48ae4fdb26d5c7688, type: 3}
+    second: {fileID: 2800000, guid: 91598f3b6358bc94fb593db381469989, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
@@ -243,32 +278,32 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rak_rak_AlbedoTransparency
-    second: {fileID: 2800000, guid: 0b26e27355882694d80863a999d89e58, type: 3}
+    second: {fileID: 2800000, guid: 1ee637f25af317c42a038aae959e8a0c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rak_rak_MetallicSmoothness
-    second: {fileID: 2800000, guid: eb0125339ca9afa4292c7e42bc78f044, type: 3}
+    second: {fileID: 2800000, guid: 6904c6a2ad5cebf4d92f73dc682e1492, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rak_rak_Normal
-    second: {fileID: 2800000, guid: c9347a1e16b95234786b1b6ac044008e, type: 3}
+    second: {fileID: 2800000, guid: ac308d8895d7111489f0040b30555054, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: tiled_floor_001_diffuse_2k
-    second: {fileID: 2800000, guid: f20a8dc16637ab041a4d362fa48efcf8, type: 3}
+    second: {fileID: 2800000, guid: efc453b40a856804ba1cf0a78e810474, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: tiled_floor_001_nor_gl_2k
-    second: {fileID: 2800000, guid: bdff684ed676ce841b3fea3642b5d621, type: 3}
+    second: {fileID: 2800000, guid: 0fd5aa4cd66aee74dbe75d090812b2f0, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: tiled_floor_001_rough_2k
-    second: {fileID: 2800000, guid: 724c5d894757f85419403f32c9de7fa8, type: 3}
+    second: {fileID: 2800000, guid: b56849845527c994ea32c23afae82ec7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
