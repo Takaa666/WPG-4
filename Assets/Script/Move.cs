@@ -1,3 +1,4 @@
+using NodeCanvas.Tasks.Actions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +20,8 @@ public class Move : MonoBehaviour
     private float gravity = -9.81f;
     public Animator animator;
 
-
+    Vector2 look;
+    Vector3 velo;
 
     private Camera mainCamera;
 
@@ -133,6 +135,13 @@ public class Move : MonoBehaviour
         }
     }
 
-    
+    public void Teleport(Vector3 position, Quaternion rotation)
+    {
+        transform.position = position;
+        Physics.SyncTransforms();
+        look.x = rotation.eulerAngles.y;
+        look.y = rotation.eulerAngles.z;
+        velo = Vector3.zero;
+    }
 
 }
