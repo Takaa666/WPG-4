@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c069041e960344be65cbdc4ffe188, type: 3}
+  m_Name: PuzzleRemaja1
+  m_EditorClassIdentifier: 
+  onQuestStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  questName: Puzzle Remaja 1
+  questDescription: Puzzle 1
+  targetObjectID: Puzzle 1
+  dialogueSpeed: 0
+  objectiveTask: []
+  requiredQuests:
+  - {fileID: 11400000, guid: da690b6080034d04abe8dd9a61485c20, type: 2}
+  targetObject: {fileID: 3218647189470765424, guid: 9e27ca86d514ad344ba075689a0345cb, type: 3}
+  haloEffect: {fileID: 4971576736374414447, guid: f030f3530122b704d873922b2ff7601c, type: 3}

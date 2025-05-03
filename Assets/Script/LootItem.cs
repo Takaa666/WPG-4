@@ -6,17 +6,18 @@ using UnityEngine.InputSystem;
 public class LootItem : MonoBehaviour
 {
     [SerializeField] float interactRadius;
-    [SerializeField] private LayerMask pickToInventoryLayerMask;
+    [SerializeField] private LayerMask pickToInventoryLayerMask, doorLayerMask;
     [SerializeField] private GameObject pickToInventoryUI;
-    [SerializeField] private InputActionReference pickToInventory;
+    [SerializeField] private InputActionReference pickToInventory, openDoor;
     private RaycastHit hit;
     [SerializeField][Min(1)] private float hitRange = 3;
     public GameObject sourceRaycast;
     private CharacterController characterController;
 
-    private Collider[] hitColliders;
-
-
+    private Collider[] hitColliders, doorCollider;
+    public GameObject openDoorUI;
+    Vector2 look;
+    Vector3 velo;
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class LootItem : MonoBehaviour
     void Start()
     {
         pickToInventory.action.performed += Loot;
-
+        openDoor.action.performed += OpenDoor;
     }
 
     // Update is called once per frame
@@ -36,13 +37,15 @@ public class LootItem : MonoBehaviour
         Vector3 playerPosition = sourceRaycast.transform.position;
 
         hitColliders = Physics.OverlapSphere(playerPosition, interactRadius, pickToInventoryLayerMask);
+        doorCollider = Physics.OverlapSphere(playerPosition, interactRadius, doorLayerMask);
+
         //Debug.DrawRay(sourceRaycast.position, sourceRaycast.forward * hitRange, Color.red);
         if (hitColliders.Length > 0)
         {
             Collider hit = hitColliders[0];
 
             QuestLog questLog = FindObjectOfType<QuestLog>();
-
+            
             // Check if the object is associated with an inProgress quest
             if (questLog != null && questLog.CanLoot(hit.gameObject))
             {
@@ -56,10 +59,19 @@ public class LootItem : MonoBehaviour
                 pickToInventoryUI.SetActive(false);
             }
         }
+        if (doorCollider.Length > 0)
+        {
+           
+                openDoorUI.SetActive(true);
+            
+           
+           
+        }
         else
         {
             // Hide UI if no object is detected in the area
-            pickToInventoryUI.SetActive(false);
+            //pickToInventoryUI.SetActive(false);
+            openDoorUI.SetActive(false);
         }
     }
 
@@ -108,7 +120,31 @@ public class LootItem : MonoBehaviour
         Gizmos.DrawWireSphere(sourceRaycast.transform.position, interactRadius);
     }
 
-    
+    public void OpenDoor(InputAction.CallbackContext obj)
+    {
+        if (doorCollider.Length == 0) return;
+        Collider hit = doorCollider[0];
+        if (hit == null || hit.gameObject == null) return;
+
+        // Coba ambil komponen Door dari objek yang dikenai raycast
+        Door door = hit.GetComponent<Door>();
+        if (door != null)
+        {
+            // Panggil metode teleportasi dari skrip Door
+            Teleport(door.destination.position, door.destination.rotation);
+        }
+
+
+    }
+
+    public void Teleport(Vector3 position, Quaternion rotation)
+    {
+        transform.position = position;
+        Physics.SyncTransforms();
+        look.x = rotation.eulerAngles.y;
+        look.y = rotation.eulerAngles.z;
+        velo = Vector3.zero;
+    }
 
     public static void itemScore()
     {
