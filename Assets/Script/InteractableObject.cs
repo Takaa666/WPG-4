@@ -2,22 +2,28 @@ using UnityEngine;
 
 public class ObjectInteraction : MonoBehaviour
 {
-    public GameObject interactionUI; // The game object (e.g., UI element) to show on interaction
-    private bool canInteract = false; // Flag to check if player is in range
+    public GameObject pressInteract;
+    public GameObject interactionUI; // UI yang muncul saat interaksi
+    private bool canInteract = false; // Cek apakah player dalam jarak interaksi
+    private bool hasInteracted = false; // Cek apakah sudah berinteraksi
 
     void Start()
     {
+        if (pressInteract != null)
+            pressInteract.SetActive(false);
+
         if (interactionUI != null)
-        {
-            interactionUI.SetActive(false); // Hide the UI object at the start
-        }
+            interactionUI.SetActive(false); // Sembunyikan UI saat mulai
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            canInteract = true; // Player is within interaction range
+            if (pressInteract != null)
+                pressInteract.SetActive(true);
+
+            canInteract = true;
         }
     }
 
@@ -25,22 +31,43 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            canInteract = false; // Player is out of interaction range
+            canInteract = false;
+
             if (interactionUI != null)
-            {
-                interactionUI.SetActive(false); // Hide the UI object when player exits
-            }
+                interactionUI.SetActive(false); // Sembunyikan UI saat keluar trigger
+
+            if (pressInteract != null)
+                pressInteract.SetActive(false);
         }
     }
 
     void Update()
     {
-        if (canInteract && Input.GetKeyDown(KeyCode.Q)) // If player is in range and presses "Q"
+        if (canInteract && !hasInteracted && Input.GetKeyDown(KeyCode.E))
         {
+            hasInteracted = true;
+
             if (interactionUI != null)
             {
-                interactionUI.SetActive(true); // Show the UI object
+                interactionUI.SetActive(true);
             }
+
+            if (pressInteract != null)
+            {
+                pressInteract.SetActive(false);
+            }
+
+            // Mulai proses penghancuran setelah 3 detik
+            Invoke(nameof(DestroyInteractionObjects), 3f);
         }
+    }
+
+    void DestroyInteractionObjects()
+    {
+        if (interactionUI != null)
+        {
+            Destroy(interactionUI);
+        }
+        Destroy(gameObject); // Hancurkan object ini (yang ada script-nya)
     }
 }

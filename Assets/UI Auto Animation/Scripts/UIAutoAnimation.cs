@@ -106,7 +106,7 @@ public class UIAutoAnimation : MonoBehaviour
         SetAllColorAlpha_Original();
 
         // Check if this is the last animation to complete
-        CheckAndDestroyScript();
+        //CheckAndDestroyScript();
     }
 
     private IEnumerator ExitAlphaEnumeration()
@@ -980,7 +980,7 @@ public class UIAutoAnimation : MonoBehaviour
     {
         DepthFirst, BreadthFirst
     }
-    private void CheckAndDestroyScript()
+    /*private void CheckAndDestroyScript()
     {
         // Check if all animations have completed
         if (!IsAnimating())
@@ -988,7 +988,7 @@ public class UIAutoAnimation : MonoBehaviour
             // All animations have completed, destroy the script
             Destroy(this);
         }
-    }
+    }*/
 
     private bool IsAnimating()
     {

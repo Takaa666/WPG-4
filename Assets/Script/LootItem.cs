@@ -61,24 +61,16 @@ public class LootItem : MonoBehaviour
         }
         if (doorCollider.Length > 0)
         {
-            Collider hit = doorCollider[0];
-
-            Door door = FindObjectOfType<Door>();
-            if (door != null)
-            {
-                openDoorUI.SetActive(true);
-            }
            
-            else
-            {
-                
-                openDoorUI.SetActive(false);
-            }
+                openDoorUI.SetActive(true);
+            
+           
+           
         }
         else
         {
             // Hide UI if no object is detected in the area
-            pickToInventoryUI.SetActive(false);
+            //pickToInventoryUI.SetActive(false);
             openDoorUI.SetActive(false);
         }
     }
