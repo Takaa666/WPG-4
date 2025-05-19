@@ -48,5 +48,9 @@ public class PopUpPuzzle : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         anim.ExitAnimation();
+        if (popUp.transform.childCount > 0)
+        {
+            popUp.GetComponentInChildren<Text>().enabled = false;
+        }
     }
 }
