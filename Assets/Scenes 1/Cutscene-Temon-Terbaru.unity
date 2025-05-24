@@ -2970,7 +2970,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 40046f0a560e70d4bbef91c570b312b4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3279,7 +3279,7 @@ PlayableDirector:
     value: {fileID: 1332059760}
   - key: {fileID: 2493507421124095579, guid: a0834036e2ab070469a00568e072dcf7, type: 2}
     value: {fileID: 935668282}
-  - key: {fileID: -3278185197769483003, guid: a0834036e2ab070469a00568e072dcf7, type: 2}
+  - key: {fileID: -4354071197516393112, guid: a0834036e2ab070469a00568e072dcf7, type: 2}
     value: {fileID: 1608095411}
   m_ExposedReferences:
     m_References:
