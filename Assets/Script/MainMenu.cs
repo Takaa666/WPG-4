@@ -66,7 +66,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Main Coba");
+        SceneManager.LoadScene("WPG4_Jeje Update Map");
     }
 
     public void LoadGame() { }

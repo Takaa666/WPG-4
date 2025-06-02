@@ -1755,7 +1755,6 @@ GameObject:
   - component: {fileID: 951309418}
   - component: {fileID: 951309417}
   - component: {fileID: 951309416}
-  - component: {fileID: 951309415}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1763,38 +1762,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &951309415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951309414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfe7dfc4ef9c1e4bbaf9a1c0a015390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausePanel: {fileID: 0}
-  graphicPanel: {fileID: 0}
-  audioPanel: {fileID: 0}
-  optionPanel: {fileID: 0}
-  graphicButton: {fileID: 0}
-  audioButton: {fileID: 0}
-  lowButton: {fileID: 0}
-  mediumButton: {fileID: 0}
-  highButton: {fileID: 0}
-  backButton: {fileID: 0}
-  returnToMainMenuButton: {fileID: 0}
-  exitButton: {fileID: 0}
-  resumeButton: {fileID: 0}
-  journalButton: {fileID: 0}
-  optionButton: {fileID: 0}
-  backButtonOnGraphicPanel: {fileID: 0}
-  backButtonOnAudioPanel: {fileID: 0}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
-  mixer: {fileID: 0}
 --- !u!114 &951309416
 MonoBehaviour:
   m_ObjectHideFlags: 0
