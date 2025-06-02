@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [Header("Main Menu")]
-    public GameObject mainMenu;
+    //public GameObject mainMenu;
 
     public Button NewGameButton;
-    public Button LoadGameButton;
+    //public Button LoadGameButton;
     public Button ExitButton;
     public Button OptionButton;
 
@@ -36,13 +36,13 @@ public class MainMenu : MonoBehaviour
     public void Start()
     {
         NewGameButton.onClick.AddListener(NewGame);
-        LoadGameButton.onClick.AddListener(LoadGame);
+        //LoadGameButton.onClick.AddListener(LoadGame);
         ExitButton.onClick.AddListener(ExitGame);
         OptionButton.onClick.AddListener(Option);
 
         ExitButtonOnOptionPanel.onClick.AddListener(() =>
         {
-            mainMenu.SetActive(true);
+            //mainMenu.SetActive(true);
             optionMenu.SetActive(false);
         });
 
@@ -57,7 +57,7 @@ public class MainMenu : MonoBehaviour
         BackButtonOnAudioPanel.onClick.AddListener(ShowOptionPanel);
 
 
-        mainMenu.SetActive(true);
+        //mainMenu.SetActive(true);
         optionMenu.SetActive(false);
 
 
@@ -78,7 +78,7 @@ public class MainMenu : MonoBehaviour
 
     public void Option()
     {
-        mainMenu.SetActive(false);
+        //mainMenu.SetActive(false);
         optionMenu.SetActive(true);
     }
 
