@@ -24,5 +24,5 @@ MonoBehaviour:
   requiredQuests:
   - {fileID: 11400000, guid: 89e55d658762781439f08698bf1f508e, type: 2}
   - {fileID: 11400000, guid: 4347ab8700cd8a24d91a28483bedad7f, type: 2}
-  targetObject: {fileID: 5509193540658210431, guid: 95dfb83aea413d342927b13c4d007c04, type: 3}
+  targetObject: {fileID: 240840382458154618, guid: 0064c535b5e54254fa01dabb82c32729, type: 3}
   haloEffect: {fileID: 117610990784947254, guid: 3491ca87f4975364e8483b69f79d0b93, type: 3}
