@@ -3,6 +3,7 @@ using UnityEngine;
 public class ObjectInteraction : MonoBehaviour
 {
     public GameObject pressInteract;
+    public GameObject interactionUI; // UI yang muncul saat interaksi
     private bool canInteract = false; // Cek apakah player dalam jarak interaksi
     private bool hasInteracted = false; // Cek apakah sudah berinteraksi
 
@@ -11,7 +12,8 @@ public class ObjectInteraction : MonoBehaviour
         if (pressInteract != null)
             pressInteract.SetActive(false);
 
-       
+        if (interactionUI != null)
+            interactionUI.SetActive(false); // Sembunyikan UI saat mulai
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,7 +33,8 @@ public class ObjectInteraction : MonoBehaviour
         {
             canInteract = false;
 
-            
+            if (interactionUI != null)
+                interactionUI.SetActive(false); // Sembunyikan UI saat keluar trigger
 
             if (pressInteract != null)
                 pressInteract.SetActive(false);
@@ -44,16 +47,27 @@ public class ObjectInteraction : MonoBehaviour
         {
             hasInteracted = true;
 
-            
+            if (interactionUI != null)
+            {
+                interactionUI.SetActive(true);
+            }
 
             if (pressInteract != null)
             {
                 pressInteract.SetActive(false);
             }
 
-            Destroy(gameObject);
+            // Mulai proses penghancuran setelah 3 detik
+            Invoke(nameof(DestroyInteractionObjects), 3f);
         }
     }
 
-    
+    void DestroyInteractionObjects()
+    {
+        if (interactionUI != null)
+        {
+            Destroy(interactionUI);
+        }
+        Destroy(gameObject); // Hancurkan object ini (yang ada script-nya)
+    }
 }

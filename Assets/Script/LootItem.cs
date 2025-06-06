@@ -70,7 +70,7 @@ public class LootItem : MonoBehaviour
         else
         {
             // Hide UI if no object is detected in the area
-            pickToInventoryUI.SetActive(false);
+            //pickToInventoryUI.SetActive(false);
             openDoorUI.SetActive(false);
         }
     }

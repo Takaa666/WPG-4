@@ -22,5 +22,5 @@ MonoBehaviour:
   objectiveTask:
   - 
   requiredQuests: []
-  targetObject: {fileID: 5986573807395356691, guid: b5fb33524ad1e72449f5eb2fce0e0675, type: 3}
+  targetObject: {fileID: 7695745228692498590, guid: ee7ff8f015085ce4994594e48e22e9ae, type: 3}
   haloEffect: {fileID: 8905152198306512978, guid: 0625c02d446f5fc4385da93bfe3cdbba, type: 3}
