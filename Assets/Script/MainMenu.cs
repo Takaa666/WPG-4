@@ -7,10 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [Header("Main Menu")]
-    public GameObject mainMenu;
-
     public Button NewGameButton;
-    public Button LoadGameButton;
     public Button ExitButton;
     public Button OptionButton;
 
@@ -33,16 +30,17 @@ public class MainMenu : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
 
-    public void Start()
+    public Image panel;
+
+    private void Start()
     {
         NewGameButton.onClick.AddListener(NewGame);
-        LoadGameButton.onClick.AddListener(LoadGame);
         ExitButton.onClick.AddListener(ExitGame);
         OptionButton.onClick.AddListener(Option);
+        panel.enabled = false;
 
         ExitButtonOnOptionPanel.onClick.AddListener(() =>
         {
-            mainMenu.SetActive(true);
             optionMenu.SetActive(false);
         });
 
@@ -53,23 +51,34 @@ public class MainMenu : MonoBehaviour
         MediumButton.onClick.AddListener(MediumQuality);
         HighButton.onClick.AddListener(HighQuality);
         BackButtonOnGraphicPanel.onClick.AddListener(ShowOptionPanel);
-
         BackButtonOnAudioPanel.onClick.AddListener(ShowOptionPanel);
 
-
-        mainMenu.SetActive(true);
         optionMenu.SetActive(false);
-
-
-
     }
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Main Coba");
+        panel.enabled = true;
+        UIAutoAnimation anim = panel.GetComponent<UIAutoAnimation>();
+        anim.EntranceAnimation();
+
+        StartCoroutine(StartNewGameWithDelay());
     }
 
-    public void LoadGame() { }
+    private IEnumerator StartNewGameWithDelay()
+    {
+        // Aktifkan animasi panel
+
+        // Pastikan panel aktif (jika misalnya panel awalnya nonaktif)
+        //panel.gameObject.SetActive(true);
+
+        // Tunggu 3 detik
+        yield return new WaitForSeconds(3f);
+
+        // Pindah scene
+        SceneManager.LoadScene("WPG4_Jeje Update Map");
+
+    }
 
     public void ExitGame()
     {
@@ -78,7 +87,6 @@ public class MainMenu : MonoBehaviour
 
     public void Option()
     {
-        mainMenu.SetActive(false);
         optionMenu.SetActive(true);
     }
 
@@ -113,5 +121,4 @@ public class MainMenu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(5);
     }
-
 }
