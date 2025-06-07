@@ -31,13 +31,15 @@ public class MainMenu : MonoBehaviour
     public Slider sfxSlider;
 
     public Image panel;
-
+    public Image panelStudio;
+    public Image panelLogoGame;
+    public Image panelHitam;
     private void Start()
     {
+        // Hubungkan tombol seperti biasa
         NewGameButton.onClick.AddListener(NewGame);
         ExitButton.onClick.AddListener(ExitGame);
         OptionButton.onClick.AddListener(Option);
-        panel.enabled = false;
 
         ExitButtonOnOptionPanel.onClick.AddListener(() =>
         {
@@ -54,7 +56,58 @@ public class MainMenu : MonoBehaviour
         BackButtonOnAudioPanel.onClick.AddListener(ShowOptionPanel);
 
         optionMenu.SetActive(false);
+
+        // Matikan semua panel dulu
+        //panel.enabled = false;
+        panelStudio.enabled = false;
+        panelLogoGame.enabled = false;
+
+        // Mulai intro sequence
+        StartCoroutine(PlayIntroSequence());
     }
+
+    private IEnumerator PlayIntroSequence()
+    {
+        // Step 1: Panel
+        panel.enabled = true;
+        UIAutoAnimation panelAnim = panel.GetComponent<UIAutoAnimation>();
+        panelAnim.EntranceAnimation();
+        yield return new WaitForSeconds(2f);
+        panelAnim.ExitAnimation();
+        //yield return new WaitForSeconds(2f);
+
+        // Step 2: panelStudio
+        panel.enabled = false;
+        panelStudio.enabled = true;
+        UIAutoAnimation studioAnim = panelStudio.GetComponent<UIAutoAnimation>();
+        studioAnim.EntranceAnimation();
+        yield return new WaitForSeconds(2f);
+        studioAnim.ExitAnimation();
+        //yield return new WaitForSeconds(2f);
+
+        // Step 3: Panel lagi
+        panelStudio.enabled = false;
+        panel.enabled = true;
+        panelAnim.EntranceAnimation();
+        yield return new WaitForSeconds(2f);
+        panelAnim.ExitAnimation();
+        //yield return new WaitForSeconds(2f);
+
+        // Step 4: panelLogoGame
+        panel.enabled = false;
+        panelLogoGame.enabled = true;
+        UIAutoAnimation logoAnim = panelLogoGame.GetComponent<UIAutoAnimation>();
+        logoAnim.EntranceAnimation();
+        yield return new WaitForSeconds(2f);
+        logoAnim.ExitAnimation();
+        //yield return new WaitForSeconds(2f);
+        panelLogoGame.enabled = false;
+        panelHitam.enabled = false;
+        // Optional: di sini bisa lanjutkan ke menu utama atau aktifkan tombol
+        // misalnya:
+        // ShowMainMenu();
+    }
+
 
     public void NewGame()
     {
