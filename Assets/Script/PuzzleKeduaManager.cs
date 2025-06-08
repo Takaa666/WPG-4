@@ -57,7 +57,7 @@ public class PuzzleKeduaManager : MonoBehaviour
 
     }
 
-    bool QuestObjectDestroyed()
+    public bool QuestObjectDestroyed()
     {
         foreach (var obj in questObject)
         {

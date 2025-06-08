@@ -112,26 +112,32 @@ public class Move : MonoBehaviour
 
     private bool IsGrounded() => characterController.isGrounded;
 
-    
+
     private void UpdateAnimation()
     {
-        /*if (!IsGrounded())
+        if (!IsGrounded())
         {
             animator.SetTrigger("jump");
+            return;
         }
-        else*/
-        if (input.sqrMagnitude == 0)
-        {
-            animator.SetTrigger("idle");
-        }
-        else
-        {
-            animator.SetTrigger("walk");
-        }
-        if (movement.isSprinting)
+
+        if (movement.isSprinting && input.sqrMagnitude > 0)
         {
             animator.SetTrigger("run");
             animator.ResetTrigger("walk");
+            animator.ResetTrigger("idle");
+        }
+        else if (input.sqrMagnitude > 0)
+        {
+            animator.SetTrigger("walk");
+            animator.ResetTrigger("run");
+            animator.ResetTrigger("idle");
+        }
+        else
+        {
+            animator.SetTrigger("idle");
+            animator.ResetTrigger("walk");
+            animator.ResetTrigger("run");
         }
     }
 

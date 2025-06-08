@@ -100,7 +100,7 @@ public class MainMenu : MonoBehaviour
         logoAnim.EntranceAnimation();
         yield return new WaitForSeconds(2f);
         logoAnim.ExitAnimation();
-        //yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f);
         panelLogoGame.enabled = false;
         panelHitam.enabled = false;
         // Optional: di sini bisa lanjutkan ke menu utama atau aktifkan tombol
