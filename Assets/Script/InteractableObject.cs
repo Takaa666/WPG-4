@@ -5,7 +5,7 @@ public class ObjectInteraction : MonoBehaviour
     public GameObject pressInteract;
     private bool canInteract = false; // Cek apakah player dalam jarak interaksi
     private bool hasInteracted = false; // Cek apakah sudah berinteraksi
-
+    public Animator animator;
     void Start()
     {
         if (pressInteract != null)
@@ -44,7 +44,8 @@ public class ObjectInteraction : MonoBehaviour
         {
             hasInteracted = true;
 
-            
+            animator.SetTrigger("PickUp");
+
 
             if (pressInteract != null)
             {

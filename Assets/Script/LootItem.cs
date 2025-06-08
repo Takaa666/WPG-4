@@ -18,6 +18,7 @@ public class LootItem : MonoBehaviour
     public GameObject openDoorUI;
     Vector2 look;
     Vector3 velo;
+    public Animator animator;
 
     private void Awake()
     {
@@ -99,6 +100,7 @@ public class LootItem : MonoBehaviour
             {
                 questLog.CheckTargetObjectDestruction(hit.gameObject);
             }
+            animator.SetTrigger("PickUp");
 
             /*if (gameObject.CompareTag("Drop"))
             {

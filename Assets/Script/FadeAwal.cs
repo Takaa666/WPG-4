@@ -32,5 +32,9 @@ public class FadeAwal : MonoBehaviour
         // Panggil ExitAnimation setelah 3 detik
         UIAutoAnimation anim = panel.GetComponent<UIAutoAnimation>();
         anim.ExitAnimation();
+        yield return new WaitForSeconds(3f);
+
+        panel.gameObject.SetActive(false);
+
     }
 }

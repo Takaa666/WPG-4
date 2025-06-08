@@ -6,6 +6,8 @@ public class WalkingScript : MonoBehaviour
 {
     public List<AudioClip> walkSounds;
     public List<AudioClip> runningSound;
+    public List<AudioClip> pickUpSound;
+
     public AudioSource audioSource;
 
     public int pos;
@@ -20,6 +22,12 @@ public class WalkingScript : MonoBehaviour
     {
         p = (int)Mathf.Floor(Random.Range(0, runningSound.Count));
         audioSource.PlayOneShot(runningSound[p]);
+    }
+
+    public void PickUpSound()
+    {
+        p = (int)Mathf.Floor(Random.Range(0, pickUpSound.Count));
+        audioSource.PlayOneShot(pickUpSound[p]);
     }
     // Start is called before the first frame update
     void Start()
