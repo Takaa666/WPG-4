@@ -27495,8 +27495,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSounds:
   - {fileID: 8300000, guid: f32690aadc00ab64a834b39ef622377a, type: 3}
+  runningSound: []
   audioSource: {fileID: 1417032064}
   pos: 0
+  p: 0
 --- !u!1001 &1356750938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35805,7 +35807,7 @@ MonoBehaviour:
   _lockBoundGraphPrefabOverrides: 1
   _preInitializeSubGraphs: 0
   _updateMode: 0
-  _graph: {fileID: 11400000, guid: b016895c2820bfc428543e2e0636967f, type: 2}
+  _graph: {fileID: 11400000, guid: 50ce18634e662514db4c3b2efb26f28c, type: 2}
   _blackboard: {fileID: 1766863589}
 --- !u!114 &1766863589
 MonoBehaviour:
@@ -35830,7 +35832,9 @@ MonoBehaviour:
     Area":{"_value":3,"_name":"Boundary Area","_id":"947c38fc-d2a4-48d9-b8bb-e6b2dfbb6c37","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Collider,
     UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Scream
     Sound":{"_value":4,"_name":"Scream Sound","_id":"944a9d13-0cc6-499c-bc97-702edb24994f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AudioSource,
-    UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Animation
+    Name":{"_name":"Animation Name","_id":"046a97fd-613a-471a-939e-fe5061d64010","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 1417032062}
@@ -35865,6 +35869,9 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1766863594}
+  - _json: '{"_name":"Animation Name","_id":"046a97fd-613a-471a-939e-fe5061d64010","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!95 &1766863590
 Animator:
   serializedVersion: 5
