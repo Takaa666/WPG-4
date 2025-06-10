@@ -17,7 +17,7 @@ public class MoveToTargetAndPlayAnimationWhenClose : ActionTask<Transform>
     public BBParameter<AudioSource> screamSound;
     public float screamInterval = 4f;
 
-    public float attackAnimationDuration = 2f; // <- Tambahan: durasi animasi serangan
+    public float attackAnimationDuration = 2f;
 
     private bool hasPlayedCloseAnimation = false;
     private bool isAttacking = false;
@@ -54,25 +54,22 @@ public class MoveToTargetAndPlayAnimationWhenClose : ActionTask<Transform>
 
         float distance = Vector3.Distance(agent.position, target.value.transform.position);
 
-        // Jika sedang menyerang, tunggu animasi selesai
         if (isAttacking)
         {
             attackTimer += Time.deltaTime;
             if (attackTimer >= attackAnimationDuration)
             {
-                EndAction(true); // Animasi serangan selesai
+                EndAction(true);
             }
             return;
         }
 
-        // Jika target di luar radius sebelum menyerang, batalkan
         if (distance > detectionRadius && !hasPlayedCloseAnimation)
         {
             EndAction(false);
             return;
         }
 
-        // Jika sudah cukup dekat, mulai serangan
         if (distance <= stoppingDistance)
         {
             if (!hasPlayedCloseAnimation)
@@ -86,9 +83,9 @@ public class MoveToTargetAndPlayAnimationWhenClose : ActionTask<Transform>
                 isAttacking = true;
                 attackTimer = 0f;
             }
-
-            return; // Tunggu animasi serangan selesai
+            return;
         }
+
 
         // Bergerak ke arah target
         // Bergerak ke arah target
@@ -99,6 +96,7 @@ public class MoveToTargetAndPlayAnimationWhenClose : ActionTask<Transform>
         agent.rotation = Quaternion.Slerp(agent.rotation, targetRotation, Time.deltaTime * 5f);
 
         // Bergerak maju
+
         agent.position += direction * moveSpeed * Time.deltaTime;
 
 
