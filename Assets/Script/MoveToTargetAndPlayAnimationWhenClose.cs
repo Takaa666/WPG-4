@@ -91,8 +91,16 @@ public class MoveToTargetAndPlayAnimationWhenClose : ActionTask<Transform>
         }
 
         // Bergerak ke arah target
+        // Bergerak ke arah target
         Vector3 direction = (target.value.transform.position - agent.position).normalized;
+
+        // Tambahkan rotasi ke arah target
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        agent.rotation = Quaternion.Slerp(agent.rotation, targetRotation, Time.deltaTime * 5f);
+
+        // Bergerak maju
         agent.position += direction * moveSpeed * Time.deltaTime;
+
 
         // Suara teriakan setiap interval
         screamTimer += Time.deltaTime;
