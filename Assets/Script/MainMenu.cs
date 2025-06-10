@@ -129,7 +129,7 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         // Pindah scene
-        SceneManager.LoadScene("WPG4_Jeje Update Map");
+        SceneManager.LoadScene("Cutscene-Opening 1");
 
     }
 

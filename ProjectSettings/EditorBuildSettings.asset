@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes 1/MainMenuNew.unity
     guid: 2275ebaa9b561144284b6fcdbf2e857d
   - enabled: 1
+    path: Assets/Scenes 1/Cutscene-Opening 1.unity
+    guid: 46e2c10697da843439c5d725a82f1b79
+  - enabled: 1
     path: Assets/Scenes 1/WPG4_Jeje Update Map.unity
     guid: ae6758ed68a085d4fb057c8efe1fefcd
   m_configObjects:
