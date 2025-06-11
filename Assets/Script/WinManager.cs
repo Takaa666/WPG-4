@@ -58,6 +58,6 @@ public class WinManager : MonoBehaviour
         yield return new WaitForSeconds(2f); // Tunggu 2 detik setelah animasi
 
         // Pindah scene
-        SceneManager.LoadScene("Cutscene-Temon-Terbaru");
+        SceneManager.LoadScene("Cutscene-Temon-Terbaru 1");
     }
 }

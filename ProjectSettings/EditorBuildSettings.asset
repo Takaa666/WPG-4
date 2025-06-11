@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes 1/MainMenuNew.unity
     guid: 2275ebaa9b561144284b6fcdbf2e857d
   - enabled: 1
@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes 1/WPG4_Jeje Update Map.unity
     guid: ae6758ed68a085d4fb057c8efe1fefcd
   - enabled: 1
-    path: Assets/Scenes 1/Cutscene-Temon-Terbaru.unity
-    guid: 53d0657cdfb77884fbeffc48b570fce2
+    path: Assets/Scenes 1/Cutscene-Temon-Terbaru 1.unity
+    guid: 5a14adeb6b377ed49bfdd8f5e567d7d0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4617cbc6fa89ed54b983261ee462e817, type: 2}
